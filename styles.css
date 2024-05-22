@@ -1,6 +1,23 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: ChiaroStd-B, sans-serif;
+}
+
+@font-face {
+  font-family: "ChiaroStd-B";
+  src: url("fonts/ChiaroStd-B.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 #background {
@@ -20,14 +37,69 @@ body {
   height: 70px;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10%;
   opacity: 0;
   transition: opacity 1s;
   z-index: 2;
 }
 
 #game-container {
-  background-color: white;
-  width: 800px;
-  height: 600px;
+  background-color: black;
+  width: 70%;
+  height: 80%;
   z-index: 3;
+  background-image: url("images/post-office.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0;
+  border: 5px solid rgb(88 86 86);
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#audio-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  height: 35%;
+  background-color: black;
+  border-radius: 10%;
+  opacity: 0.8;
+  z-index: 4;
+  animation: pop-in 0.1s ease-in;
+}
+
+#audio-prompt p {
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5%;
+  text-shadow: #000 1px 0 10px;
+  filter: blur(1.1px);
+}
+
+.red {
+  color: red;
+}
+
+#audio-prompt img {
+  z-index: 9;
+}
+
+#audio-prompt button {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #48ff4a;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10%;
+  font-family: "ChiaroStd-B";
+  text-shadow: #000 1px 0 10px;
+  filter: blur(1.1px);
+  animation: pop-in 0.1s ease-in;
 }
