@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 1;
+}
+
+#background img {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 2;
+}
+
+#game-container {
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  z-index: 3;
+}
