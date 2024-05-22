@@ -10,16 +10,22 @@
 
 <body>
     <div id="background">
-        <script src="script.js"></script>
         <div id="game-container">
-            <div id="audio-prompt">
-                <p>Would you like to have <span class="red">audio</span>?</p>
-                <img src="images/arrow.png"><button id="yes-button">Yes</button>
+            <div id="audio-prompt" class="dialog-box">
+                <p class="normal-text">Would you like to have <span class="red">audio</span>?</p>
+                <img src="images/arrow.png" id="arrow">
+                <button id="yes-button">Yes</button>
                 <button id="no-button">No</button>
+            </div>
+            <div id="rules" class="dialog-box">
+                <img src="images/postmanhead-transparent.png" class="postman">
+                <p id="text1" class="normal-text"></p>
+                <img src="images/chevron.png" class="chevron">
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
 
 </body>
 
