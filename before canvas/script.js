@@ -8,10 +8,6 @@ const chevron = document.querySelector(".chevron");
 const rules = document.getElementById("rules");
 const postman = document.querySelector(".postman");
 
-const text1 = document.getElementById("text1");
-const text2 = document.getElementById("text2");
-const text3 = document.getElementById("text3");
-
 let intro = new Audio("audio/music-intro.wav");
 let music = new Audio("audio/music.wav");
 let yah = new Audio("audio/yah.wav");
@@ -71,8 +67,10 @@ setInterval(createImages, 1000);
 
 function startGame() {
   rules.style.display = "flex"; // Display the rules dialog box
-  nextText();
+  nextText ();
+
 }
+
 
 function playMusic() {
   intro.play();
@@ -133,18 +131,11 @@ function buttonBehavior() {
   };
 }
 
-function nextText() {
+
+function nextText (){
   chevron.onclick = function () {
-    if (!isMuted) {
+    if(!isMuted) {
       next.play();
     }
-    text1.style.display = "none";
-    text2.style.display = "block";
-    postman.offsetHeight; /* trigger reflow */
-    postman.style.animation = null;
-    setTimeout(function () {
-      chevron.style.visibility = "visible";
-      postman.style.animation = "none";
-    }, 3200);
-  };
+  }
 }

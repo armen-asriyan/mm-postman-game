@@ -6,6 +6,3 @@ https://www.youtube.com/watch?v=ffq0h7dPy3w
 DEMO: https://armen-asriyan.github.io/mm-postman-game/
 
 (WORK IN PROGRESS)
-
-
-TODO: Transform game into Canvas
