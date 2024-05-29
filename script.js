@@ -115,7 +115,7 @@ function showArrow() {
   };
 
   noButton.onmouseover = function () {
-    arrow.style.top = "81%";
+    arrow.style.top = "75%";
     arrow.style.visibility = "visible";
   };
 
@@ -309,25 +309,4 @@ function showResults() {
   };
 }
 
-function tryAgain() {
-  chevron.style.visibility = "hidden";
-  text6.style.display = "none";
-  text7.innerHTML = "Do you wanna try again?";
-  text7.style.display = "block";
-  postman.offsetHeight; /* trigger reflow */
-  postman.style.animation = null;
-
-  setTimeout(function () {
-    postman.style.animation = "none";
-    startButton.style.display = "block";
-    startTimer();
-    setTimeout(function () {
-      stopButton.style.visibility = "visible";
-    }, 3000);
-  }, 1000);
-
-  if (!isMuted) {
-    next.play();
-  }
-  chevronClickCount++; // Increment to track the try again stage
-}
+function tryAgain() {}
